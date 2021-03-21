@@ -1,14 +1,16 @@
 import React from 'react';
 import { todos } from 'data/todos';
-import TodoListItem from 'components/TodoListItem/TodoListItem';
 
 const TodoList = () => (
   <div>
     <h1>ToDo List</h1>
     <ul>
-      {todos.map((data) => (
-        <TodoListItem data={data} />
-      ))}
+      <li>
+        <div>
+          <h2>Buy a Guitar</h2>
+          <button>X</button>
+        </div>
+      </li>
     </ul>
   </div>
 );
