@@ -13,7 +13,6 @@ const Wrapper = styled.div`
 
 const Root = () => (
   <>
-    <GlobalStyle />
     <Wrapper>
       <TodoList />
     </Wrapper>

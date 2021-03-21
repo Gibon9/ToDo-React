@@ -12,12 +12,9 @@ const Wrapper = styled.div`
 `;
 
 const Root = () => (
-  <>
-    <GlobalStyle />
-    <Wrapper>
-      <TodoList />
-    </Wrapper>
-  </>
+  <Wrapper>
+    <TodoList />
+  </Wrapper>
 );
 
 export default Root;

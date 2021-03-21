@@ -1,6 +1,6 @@
-import TodoList from 'components/organisms/TodoList/TodoList';
+import TodoList from 'components/TodoList/TodoList';
 import styled from 'styled-components';
-import { GlobalStyle } from 'assets/styles/GlobalStyle';
+import {} from 'assets/styles/GlobalStyle';
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,12 +12,9 @@ const Wrapper = styled.div`
 `;
 
 const Root = () => (
-  <>
-    <GlobalStyle />
-    <Wrapper>
-      <TodoList />
-    </Wrapper>
-  </>
+  <Wrapper>
+    <TodoList />
+  </Wrapper>
 );
 
 export default Root;
