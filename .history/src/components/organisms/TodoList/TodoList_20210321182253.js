@@ -12,10 +12,7 @@ const Wrapper = styled.div`
   padding: 35px;
 `;
 
-const StyledHeader = styled.div`
-  font-weight: bold;
-  font-size: 36px;
-`;
+const StyledHeader = styled.div``;
 
 const TodoList = () => (
   <Wrapper>

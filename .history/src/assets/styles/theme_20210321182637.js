@@ -8,7 +8,6 @@ export const theme = {
     lightOrange: #F7C59F;
     lightGrey: #E5E5E5;
   },
-  
   fontSize: {
     xl: '36px',
     l: '17px',

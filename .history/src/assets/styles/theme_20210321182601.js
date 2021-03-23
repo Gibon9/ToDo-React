@@ -5,10 +5,8 @@ export const theme = {
     darkBlue: #004E89;
     lighBlue: #1A659E;
     lightGreen: #EFEFD0;
-    lightOrange: #F7C59F;
-    lightGrey: #E5E5E5;
+    lightOrange:#F7C59F;
   },
-  
   fontSize: {
     xl: '36px',
     l: '17px',

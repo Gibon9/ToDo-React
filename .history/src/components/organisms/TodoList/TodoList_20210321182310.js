@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 
 const StyledHeader = styled.div`
   font-weight: bold;
-  font-size: 36px;
 `;
 
 const TodoList = () => (
