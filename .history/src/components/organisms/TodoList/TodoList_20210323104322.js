@@ -2,12 +2,11 @@ import React from 'react';
 import { todos } from 'data/todos';
 import TodoListItem from 'components/molecules/TodoListItem/TodoListItem';
 import styled from 'styled-components';
-import AddButton from 'components/atoms/AddButton/AddButton';
 
 const Wrapper = styled.div`
   width: 488px;
   height: 646px;
-  background-color: ${({ theme }) => theme.colors.lightGreen};
+  background-color: #efefd0;
   border-radius: 25px;
   box-shadow: 5px 5px 5px 0px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   padding: 35px;
@@ -37,7 +36,7 @@ const TodoList = () => (
         <TodoListItem data={data} />
       ))}
     </StyledList>
-    <AddButton />
+    <button>Add ToDo</button>
   </Wrapper>
 );
 

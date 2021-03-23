@@ -2,7 +2,6 @@ import React from 'react';
 import { todos } from 'data/todos';
 import TodoListItem from 'components/molecules/TodoListItem/TodoListItem';
 import styled from 'styled-components';
-import AddButton from 'components/atoms/AddButton/AddButton';
 
 const Wrapper = styled.div`
   width: 488px;
@@ -37,7 +36,7 @@ const TodoList = () => (
         <TodoListItem data={data} />
       ))}
     </StyledList>
-    <AddButton />
+    <button>Add ToDo</button>
   </Wrapper>
 );
 

@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 `;
 
 const Root = () => (
-  <ThemeProvider theme={theme}>
+  <ThemeProvider>
     <GlobalStyle />
     <Wrapper>
       <TodoList />
