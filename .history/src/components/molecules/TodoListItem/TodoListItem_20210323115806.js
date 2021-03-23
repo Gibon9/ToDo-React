@@ -17,14 +17,11 @@ const Wrapper = styled.li`
   font-size: ${({ theme }) => theme.fontSize.m};
 `;
 
-const StyledParagraph = styled.p`
-  margin-left: 35px;
-  max-width: 75%;
-`;
+const StyledParagraph = styled.p``;
 
 const TodoListItem = ({ data }) => (
   <Wrapper>
-    <StyledParagraph>{data}</StyledParagraph>
+    <p>{data}</p>
     <button>X</button>
   </Wrapper>
 );

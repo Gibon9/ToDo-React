@@ -24,7 +24,7 @@ const StyledParagraph = styled.p`
 
 const TodoListItem = ({ data }) => (
   <Wrapper>
-    <StyledParagraph>{data}</StyledParagraph>
+    <p>{data}</p>
     <button>X</button>
   </Wrapper>
 );

@@ -18,13 +18,12 @@ const Wrapper = styled.li`
 `;
 
 const StyledParagraph = styled.p`
-  margin-left: 35px;
   max-width: 75%;
 `;
 
 const TodoListItem = ({ data }) => (
   <Wrapper>
-    <StyledParagraph>{data}</StyledParagraph>
+    <p>{data}</p>
     <button>X</button>
   </Wrapper>
 );
