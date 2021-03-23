@@ -18,7 +18,6 @@ const Wrapper = styled.div`
 `;
 
 const StyledHeader = styled.div`
-  padding-top: 10px;
   margin: 0 10px 30px;
   width: 90%;
   font-weight: bold;
@@ -29,15 +28,10 @@ const StyledHeader = styled.div`
 `;
 
 const StyledList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   list-style: none;
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
 `;
 
 const TodoList = () => (

@@ -6,9 +6,8 @@ import AddButton from 'components/atoms/AddButton/AddButton';
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 488px;
   height: 646px;
   background-color: ${({ theme }) => theme.colors.lightGreen};
@@ -20,7 +19,6 @@ const Wrapper = styled.div`
 const StyledHeader = styled.div`
   padding-top: 10px;
   margin: 0 10px 30px;
-  width: 90%;
   font-weight: bold;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.colors.darkBlue};
@@ -29,15 +27,9 @@ const StyledHeader = styled.div`
 `;
 
 const StyledList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
   list-style: none;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
 `;
 
 const TodoList = () => (

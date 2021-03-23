@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledButton = styled.button`
   cursor: pointer;
-  min-height: 68px;
+  min-height: 53px;
   width: 181px;
   border-radius: 15px;
   margin-bottom: 10px;

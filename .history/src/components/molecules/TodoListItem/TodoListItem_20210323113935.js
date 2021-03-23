@@ -6,7 +6,6 @@ const Wrapper = styled.li`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Open Sans', sans-serif;
   width: 100%;
   max-width: 414px;
   height: 59px;
