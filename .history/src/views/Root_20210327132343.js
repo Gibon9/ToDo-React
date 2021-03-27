@@ -2,7 +2,6 @@ import TodoList from 'components/organisms/TodoList/TodoList';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
-import { Wrapper } from './Root.styled';
 
 const Root = () => (
   <ThemeProvider theme={theme}>

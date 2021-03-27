@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Wrapper, StyledParagraph } from './TodoListItem.styles';
+
 import DeleteButton from 'components/atoms/DeleteButton/DeleteButton';
 
 const TodoListItem = ({ data }) => (
