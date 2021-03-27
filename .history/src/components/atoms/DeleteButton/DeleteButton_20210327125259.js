@@ -10,18 +10,12 @@ const StyeledButton = styled.button`
   width: 24px;
   color: ${({ theme }) => theme.colors.lightOrange};
   cursor: pointer;
-  padding: 0;
 
-  svg {
-    width: 100%;
-    height: 100%;
+  &:hover {
+    color: ${({ theme }) => theme.colors.darkOrange};
   }
 `;
 
-const DeleteButton = () => (
-  <StyeledButton>
-    <DeleteIcon />
-  </StyeledButton>
-);
+const DeleteButton = () => <StyeledButton></StyeledButton>;
 
 export default DeleteButton;

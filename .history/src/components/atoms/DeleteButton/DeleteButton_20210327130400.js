@@ -16,6 +16,10 @@ const StyeledButton = styled.button`
     width: 100%;
     height: 100%;
   }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.darkOrange};
+  }
 `;
 
 const DeleteButton = () => (

@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { ReactComponent as DeleteIcon } from 'assets/icons/delete-icon.svg';
+import { ReactComponent as DeleteIconHover } from 'assets/icons/delete-icon-hover.svg';
 
 const StyeledButton = styled.button`
   margin-right: 25px;
   background-color: transparent;
-  border: none;
+  border: red solid 1px;
   height: 24px;
   width: 24px;
   color: ${({ theme }) => theme.colors.lightOrange};
@@ -15,6 +16,14 @@ const StyeledButton = styled.button`
   svg {
     width: 100%;
     height: 100%;
+  }
+
+  svg:hover {
+    fill: ${({ theme }) => theme.colors.darkOrange};
+  }
+
+  &:hover {
+    color: ${({ theme }) => theme.colors.darkOrange};
   }
 `;
 
