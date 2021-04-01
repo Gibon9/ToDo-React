@@ -5,14 +5,11 @@ import { Wrapper, StyledHeader, StyledList } from './TodoList.styled';
 import AddButton from 'components/atoms/AddButton/AddButton';
 
 const TodoList = () => {
-  const [data, setData] = useState(todos);
-  console.log(data);
+  const [todos, setTodos] = useState([todos]);
 
   const deleteTodo = (id) => {
-    const filteredTodos = data.filter((todo) => todo.id !== id);
-    setData(filteredTodos);
-    console.log(data);
-    console.log(setData);
+    const filteredTodos = todos.filter((todo) => todo.id !== id);
+    setTodos(filteredTodos);
   };
 
   return (
@@ -20,7 +17,7 @@ const TodoList = () => {
       <StyledHeader>ToDo List</StyledHeader>
       <StyledList>
         {todos.map((data) => (
-          <TodoListItem deleteTodo={deleteTodo} key={data.id} data={data} />
+          <TodoListItem deleteTodo={deleteTodo} data={data} />
         ))}
       </StyledList>
       <AddButton />

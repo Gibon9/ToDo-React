@@ -3,10 +3,10 @@ import React from 'react';
 import { Wrapper, StyledParagraph } from './TodoListItem.styles';
 import DeleteButton from 'components/atoms/DeleteButton/DeleteButton';
 
-const TodoListItem = ({ data: { todo, id }, deleteTodo }) => (
+const TodoListItem = ({ data: { todo, id } }, deleteTodo) => (
   <Wrapper>
-    <StyledParagraph>{todo}</StyledParagraph>
-    <DeleteButton onClick={() => deleteTodo(id)} />
+    <StyledParagraph>{data}</StyledParagraph>
+    <DeleteButton onClick={() => deleteTodo(data)} />
   </Wrapper>
 );
 

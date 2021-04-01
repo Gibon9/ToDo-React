@@ -12,7 +12,6 @@ const TodoList = () => {
     const filteredTodos = data.filter((todo) => todo.id !== id);
     setData(filteredTodos);
     console.log(data);
-    console.log(setData);
   };
 
   return (

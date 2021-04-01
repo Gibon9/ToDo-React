@@ -10,9 +10,9 @@ const TodoList = () => {
 
   const deleteTodo = (id) => {
     const filteredTodos = data.filter((todo) => todo.id !== id);
+    console.log(filteredTodos);
     setData(filteredTodos);
     console.log(data);
-    console.log(setData);
   };
 
   return (
