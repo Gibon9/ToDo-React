@@ -8,15 +8,15 @@ const TodoList = () => {
   const [data, setData] = useState(todos);
 
   const deleteTodo = (id) => {
-    const filteredUsers = data.filter((todo) => todo.id !== id);
-    setData(filteredUsers);
+    const filteredTodo = data.filter(todo) => todo.id !== id);
+    setData(filteredTodo);
   };
+  console.log(data);
 
   return (
     <Wrapper>
       <StyledHeader>ToDo List</StyledHeader>
       <StyledList>
-        {console.log(data)}
         {todos.map((data) => (
           <TodoListItem deleteTodo={deleteTodo} key={data.id} data={data} />
         ))}

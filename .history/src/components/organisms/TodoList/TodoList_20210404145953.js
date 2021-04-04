@@ -1,11 +1,23 @@
 import React, { useState } from 'react';
-import { todos } from 'data/todos';
+import { todos as todoData } from 'data/todos';
 import TodoListItem from 'components/molecules/TodoListItem/TodoListItem';
 import { Wrapper, StyledHeader, StyledList } from './TodoList.styled';
 import AddButton from 'components/atoms/AddButton/AddButton';
 
+const mockAPI = (success) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (todoData) {
+        resolve([...todoData]);
+      } else {
+        reject({ message: 'Error' });
+      }
+    }, 2000);
+  });
+};
+
 const TodoList = () => {
-  const [data, setData] = useState(todos);
+  const [data, setData] = useState(todoData);
 
   const deleteTodo = (id) => {
     const filteredUsers = data.filter((todo) => todo.id !== id);

@@ -5,7 +5,11 @@ import { Wrapper, StyledHeader, StyledList } from './TodoList.styled';
 import AddButton from 'components/atoms/AddButton/AddButton';
 
 const TodoList = () => {
-  const [data, setData] = useState(todos);
+  const [data, setData] = useState([
+    { todo: 'Buy a guitar', id: '1' },
+    { todo: 'Go to a theater', id: '2' },
+    { todo: 'Study programing', id: '3' },
+  ]);
 
   const deleteTodo = (id) => {
     const filteredUsers = data.filter((todo) => todo.id !== id);

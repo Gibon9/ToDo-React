@@ -5,7 +5,7 @@ import { Wrapper, StyledHeader, StyledList } from './TodoList.styled';
 import AddButton from 'components/atoms/AddButton/AddButton';
 
 const TodoList = () => {
-  const [data, setData] = useState(todos);
+  const [data, setData] = useState();
 
   const deleteTodo = (id) => {
     const filteredUsers = data.filter((todo) => todo.id !== id);

@@ -4,6 +4,18 @@ import TodoListItem from 'components/molecules/TodoListItem/TodoListItem';
 import { Wrapper, StyledHeader, StyledList } from './TodoList.styled';
 import AddButton from 'components/atoms/AddButton/AddButton';
 
+const mockAPI = (success) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (usersData) {
+        resolve([...usersData]);
+      } else {
+        reject({ message: 'Error' });
+      }
+    }, 2000);
+  });
+};
+
 const TodoList = () => {
   const [data, setData] = useState(todos);
 

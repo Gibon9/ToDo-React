@@ -6,17 +6,17 @@ import AddButton from 'components/atoms/AddButton/AddButton';
 
 const TodoList = () => {
   const [data, setData] = useState(todos);
+  console.log(data);
 
   const deleteTodo = (id) => {
-    const filteredUsers = data.filter((todo) => todo.id !== id);
-    setData(filteredUsers);
+    const filteredTodo = data.filter((todo) => todo.id !== id);
+    setData(filteredTodo);
   };
 
   return (
     <Wrapper>
       <StyledHeader>ToDo List</StyledHeader>
       <StyledList>
-        {console.log(data)}
         {todos.map((data) => (
           <TodoListItem deleteTodo={deleteTodo} key={data.id} data={data} />
         ))}

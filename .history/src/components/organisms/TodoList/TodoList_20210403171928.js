@@ -8,8 +8,8 @@ const TodoList = () => {
   const [data, setData] = useState(todos);
 
   const deleteTodo = (id) => {
-    const filteredUsers = data.filter((todo) => todo.id !== id);
-    setData(filteredUsers);
+    const filteredTodo = data.filter((todo) => todo.id !== id);
+    setData([...filteredTodo]);
   };
 
   return (

@@ -7,9 +7,10 @@ import AddButton from 'components/atoms/AddButton/AddButton';
 const TodoList = () => {
   const [data, setData] = useState(todos);
 
-  const deleteTodo = (id) => {
-    const filteredUsers = data.filter((todo) => todo.id !== id);
-    setData(filteredUsers);
+  const deleteTodo = async (id) => {
+    // const filteredTodo = await data.filter((todo) => todo.id !== id);
+    // setData(filteredTodo);
+    const filteredTodo = [];
   };
 
   return (
