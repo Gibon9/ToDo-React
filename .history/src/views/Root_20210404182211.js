@@ -15,8 +15,8 @@ const Root = () => (
           <Route path="/">
             <TodoList />
           </Route>
-          <Route path="/AddForm">
-            <AddForm name="Add ToDo" id="Add ToDo" />
+          <Route path="/">
+            <AddForm />
           </Route>
         </Switch>
       </Wrapper>
