@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   align-items: flex-start;
   width: 80%;
   height: 110px;
-  padding: 10px 0;
 `;
 
 const AddForm = ({ label, name, id, type = 'text', ...props }) => {

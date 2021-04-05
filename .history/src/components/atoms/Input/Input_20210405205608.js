@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Input = styled.input`
-  font-family: 'Open Sans', sans-serif;
   color: ${({ theme }) => theme.colors.darkOrange};
   font-size: ${({ theme }) => theme.fontSize.m};
   padding: 8px;
@@ -11,5 +10,4 @@ export const Input = styled.input`
   background-color: ${({ theme }) => theme.colors.lightOrange};
   border: ${({ theme }) => theme.colors.darkOrange} solid 1px;
   font-size: ${({ theme }) => theme.fontSize.m};
-  padding: 10px 15px;
 `;

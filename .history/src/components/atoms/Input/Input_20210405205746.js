@@ -11,5 +11,4 @@ export const Input = styled.input`
   background-color: ${({ theme }) => theme.colors.lightOrange};
   border: ${({ theme }) => theme.colors.darkOrange} solid 1px;
   font-size: ${({ theme }) => theme.fontSize.m};
-  padding: 10px 15px;
 `;

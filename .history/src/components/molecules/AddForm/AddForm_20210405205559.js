@@ -7,10 +7,9 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 80%;
   height: 110px;
-  padding: 10px 0;
 `;
 
 const AddForm = ({ label, name, id, type = 'text', ...props }) => {

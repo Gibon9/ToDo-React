@@ -4,6 +4,7 @@ import { Input } from 'components/atoms/Input/Input';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -23,7 +23,7 @@ const StyledHeader = styled.div`
   margin: 60px 0 30px;
   width: 70%;
   font-weight: bold;
-  font-size: ${({ theme }) => theme.fontSize.l};
+  font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.colors.darkBlue};
   text-align: center;
   border-bottom: solid 3px ${({ theme }) => theme.colors.lighBlue};
@@ -32,11 +32,11 @@ const StyledHeader = styled.div`
 const Form = () => {
   return (
     <Wrapper>
-      <StyledHeader>Add New ToDo:</StyledHeader>
+      <StyledHeader>New ToDo:</StyledHeader>
       <AddForm />
       <AddButton />
       <CloseButton>
-        <CloseIcon />
+        <
       </CloseButton>
     </Wrapper>
   );
