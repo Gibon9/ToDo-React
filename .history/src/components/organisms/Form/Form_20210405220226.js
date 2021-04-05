@@ -9,7 +9,12 @@ const Form = () => {
   return (
     <Wrapper>
       <StyledHeader>Add New ToDo:</StyledHeader>
-      <AddForm name="AddToDo" id="AddToDo" type="AddToDo" label="Add ToDo" />
+      <AddForm
+        name="AddToDo"
+        id="AddToDo"
+        type="AddToDo"
+        placeholder="Add ToDo"
+      />
       <AddButton />
       <CloseButton>
         <CloseIcon />

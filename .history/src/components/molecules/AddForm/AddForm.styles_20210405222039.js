@@ -8,5 +8,5 @@ export const Wrapper = styled.div`
   width: 80%;
   height: 110px;
   padding: 10px 0;
-  margin-bottom: 40px;
+  border-bottom: 20px;
 `;
