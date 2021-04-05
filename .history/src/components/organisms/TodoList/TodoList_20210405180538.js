@@ -28,7 +28,7 @@ const TodoList = () => {
         setTodos(data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  });
 
   const deleteTodo = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);

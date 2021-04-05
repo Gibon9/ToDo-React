@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { todos as todosData } from 'data/todos';
+import { todos } from 'data/todos';
 import TodoListItem from 'components/molecules/TodoListItem/TodoListItem';
 import { Wrapper, StyledHeader, StyledList } from './TodoList.styled';
 import AddButton from 'components/atoms/AddButton/AddButton';
@@ -7,8 +7,8 @@ import AddButton from 'components/atoms/AddButton/AddButton';
 const mockAPI = (success) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (todosData) {
-        resolve([...todosData]);
+      if (success) {
+        resolve([...todos]);
       } else {
         reject({ message: 'Error' });
       }
@@ -20,24 +20,24 @@ const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    setIsLoading(true);
-    mockAPI()
-      .then((data) => {
-        setIsLoading(false);
-        setTodos(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+  // this.setState({ isLoading: true });
+  // mockAPI()
+  //   .then((data) => {
+  //     this.setState({ isLoading: false });
+  //     this.setState({ todos: data });
+  //   })
+  //   .catch((err) => console.log(err));
 
   const deleteTodo = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(filteredTodos);
+    setState({ todos: filteredTodos });
   };
 
   return (
     <Wrapper>
-      <StyledHeader>{isLoading ? 'Loading...' : 'ToDo List'}</StyledHeader>
+      <StyledHeader>
+        {this.state.isLoading ? 'Loading...' : 'ToDo List'}
+      </StyledHeader>
       <StyledList>
         {todos.map((data) => (
           <TodoListItem deleteTodo={deleteTodo} key={data.id} data={data} />

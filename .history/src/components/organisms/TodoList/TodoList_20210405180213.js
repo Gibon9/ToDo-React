@@ -20,15 +20,13 @@ const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(() => {
-    setIsLoading(true);
-    mockAPI()
-      .then((data) => {
-        setIsLoading(false);
-        setTodos(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+  // this.setState({ isLoading: true });
+  // mockAPI()
+  //   .then((data) => {
+  //     this.setState({ isLoading: false });
+  //     this.setState({ todos: data });
+  //   })
+  //   .catch((err) => console.log(err));
 
   const deleteTodo = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
@@ -37,7 +35,9 @@ const TodoList = () => {
 
   return (
     <Wrapper>
-      <StyledHeader>{isLoading ? 'Loading...' : 'ToDo List'}</StyledHeader>
+      <StyledHeader>
+        {this.state.isLoading ? 'Loading...' : 'ToDo List'}
+      </StyledHeader>
       <StyledList>
         {todos.map((data) => (
           <TodoListItem deleteTodo={deleteTodo} key={data.id} data={data} />
