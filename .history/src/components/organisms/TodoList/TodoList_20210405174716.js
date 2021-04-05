@@ -26,7 +26,6 @@ class TodoList extends React.Component {
     this.setState({ isLoading: true });
     mockAPI()
       .then((data) => {
-        this.setState({ isLoading: false });
         this.setState({ todos: data });
       })
       .catch((err) => console.log(err));

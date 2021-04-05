@@ -7,7 +7,7 @@ import AddButton from 'components/atoms/AddButton/AddButton';
 const mockAPI = (success) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      if (success) {
+      if (todos) {
         resolve([...todos]);
       } else {
         reject({ message: 'Error' });
@@ -19,15 +19,13 @@ const mockAPI = (success) => {
 class TodoList extends React.Component {
   state = {
     todos: [],
-    isLoading: false,
   };
 
   componentDidMount() {
-    this.setState({ isLoading: true });
     mockAPI()
       .then((data) => {
-        this.setState({ isLoading: false });
-        this.setState({ todos: data });
+        console.log(data);
+        // this.setState({ todos: data });
       })
       .catch((err) => console.log(err));
   }
@@ -40,9 +38,7 @@ class TodoList extends React.Component {
   render() {
     return (
       <Wrapper>
-        <StyledHeader>
-          {this.state.isLoading ? 'Loading...' : 'ToDo List'}
-        </StyledHeader>
+        <StyledHeader>ToDo List</StyledHeader>
         <StyledList>
           {this.state.todos.map((data) => (
             <TodoListItem
