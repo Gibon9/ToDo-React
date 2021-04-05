@@ -4,7 +4,7 @@ import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
 import { Wrapper } from './Root.styled';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-// import AddForm from 'components/organisms/AddForm/AddForm';
+import AddForm from 'components/organisms/AddForm/AddForm';
 
 const Root = () => (
   <Router>

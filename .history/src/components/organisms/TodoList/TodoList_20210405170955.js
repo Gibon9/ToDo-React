@@ -9,10 +9,7 @@ class TodoList extends React.Component {
     todos,
   };
 
-  deleteTodo = (id) => {
-    const filteredTodos = this.state.todos.filter((todo) => todo.id !== id);
-    this.setState({ todos: filteredTodos });
-  };
+  deleteTodo() {}
 
   render() {
     return (

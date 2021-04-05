@@ -5,26 +5,14 @@ import { Wrapper, StyledHeader, StyledList } from './TodoList.styled';
 import AddButton from 'components/atoms/AddButton/AddButton';
 
 class TodoList extends React.Component {
-  state = {
-    todos,
-  };
-
-  deleteTodo = (id) => {
-    const filteredTodos = this.state.todos.filter((todo) => todo.id !== id);
-    this.setState({ todos: filteredTodos });
-  };
-
   render() {
     return (
       <Wrapper>
         <StyledHeader>ToDo List</StyledHeader>
         <StyledList>
-          {this.state.todos.map((data) => (
-            <TodoListItem
-              deleteTodo={this.deleteTodo}
-              key={data.id}
-              data={data}
-            />
+          {console.log(data)}
+          {todos.map((data) => (
+            <TodoListItem deleteTodo={deleteTodo} key={data.id} data={data} />
           ))}
         </StyledList>
         <AddButton />

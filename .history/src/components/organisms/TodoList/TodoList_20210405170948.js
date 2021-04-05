@@ -9,10 +9,7 @@ class TodoList extends React.Component {
     todos,
   };
 
-  deleteTodo = (id) => {
-    const filteredTodos = this.state.todos.filter((todo) => todo.id !== id);
-    this.setState({ todos: filteredTodos });
-  };
+  deleteTodo() {}
 
   render() {
     return (
@@ -20,11 +17,7 @@ class TodoList extends React.Component {
         <StyledHeader>ToDo List</StyledHeader>
         <StyledList>
           {this.state.todos.map((data) => (
-            <TodoListItem
-              deleteTodo={this.deleteTodo}
-              key={data.id}
-              data={data}
-            />
+            <TodoListItem deleteTodo={deleteTodo} key={data.id} data={data} />
           ))}
         </StyledList>
         <AddButton />
