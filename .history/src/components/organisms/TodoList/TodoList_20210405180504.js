@@ -25,10 +25,10 @@ const TodoList = () => {
     mockAPI()
       .then((data) => {
         setIsLoading(false);
-        setTodos(data);
+        this.setState({ todos: data });
       })
       .catch((err) => console.log(err));
-  }, []);
+  });
 
   const deleteTodo = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);

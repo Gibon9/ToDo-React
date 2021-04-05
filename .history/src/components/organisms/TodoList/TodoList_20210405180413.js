@@ -21,14 +21,14 @@ const TodoList = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setIsLoading(true);
-    mockAPI()
-      .then((data) => {
-        setIsLoading(false);
-        setTodos(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
+    // this.setState({ isLoading: true });
+    // mockAPI()
+    //   .then((data) => {
+    //     this.setState({ isLoading: false });
+    //     this.setState({ todos: data });
+    //   })
+    //   .catch((err) => console.log(err));
+  });
 
   const deleteTodo = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);

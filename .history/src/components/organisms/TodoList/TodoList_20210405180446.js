@@ -24,11 +24,11 @@ const TodoList = () => {
     setIsLoading(true);
     mockAPI()
       .then((data) => {
-        setIsLoading(false);
-        setTodos(data);
+        this.setState({ isLoading: false });
+        this.setState({ todos: data });
       })
       .catch((err) => console.log(err));
-  }, []);
+  });
 
   const deleteTodo = (id) => {
     const filteredTodos = todos.filter((todo) => todo.id !== id);
