@@ -3,7 +3,6 @@ import { CloseButton } from 'components/atoms/CloseButton/CloseButton';
 import { ReactComponent as CloseIcon } from 'assets/icons/close-icon.svg';
 import AddForm from 'components/molecules/AddForm/AddForm';
 import React from 'react';
-import { Wrapper, StyledHeader } from './Form.styles';
 
 const Form = () => {
   return (

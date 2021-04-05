@@ -1,7 +1,6 @@
 import React from 'react';
 import { Label } from 'components/atoms/Label/Label';
 import { Input } from 'components/atoms/Input/Input';
-import { Wrapper } from './AddForm.styles';
 
 const AddForm = ({ label, name, id, type = 'text', ...props }) => {
   return (
