@@ -6,7 +6,6 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   width: 378px;
   height: 438px;
-  padding: 20px 0;
   background-color: ${({ theme }) => theme.colors.lightGreen};
   display: flex;
   justify-content: space-between;
@@ -31,7 +30,7 @@ const Form = () => {
     <Wrapper>
       <StyledHeader>New ToDo:</StyledHeader>
       <AddForm />
-      <AddButton />
+      <AddButton>Add ToDo</AddButton>
     </Wrapper>
   );
 };

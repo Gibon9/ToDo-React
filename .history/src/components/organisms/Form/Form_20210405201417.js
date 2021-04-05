@@ -1,4 +1,3 @@
-import AddButton from 'components/atoms/AddButton/AddButton';
 import AddForm from 'components/molecules/AddForm/AddForm';
 import React from 'react';
 import styled from 'styled-components';
@@ -6,7 +5,6 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   width: 378px;
   height: 438px;
-  padding: 20px 0;
   background-color: ${({ theme }) => theme.colors.lightGreen};
   display: flex;
   justify-content: space-between;
@@ -31,7 +29,6 @@ const Form = () => {
     <Wrapper>
       <StyledHeader>New ToDo:</StyledHeader>
       <AddForm />
-      <AddButton />
     </Wrapper>
   );
 };

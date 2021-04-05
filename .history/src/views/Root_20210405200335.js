@@ -11,14 +11,14 @@ const Root = () => (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Wrapper>
-        {/* <Switch> */}
-        {/* <Route path="/">
+        <Switch>
+          {/* <Route path="/">
             <TodoList />
           </Route> */}
-        {/* <Route path="/AddForm"> */}
-        <Form />
-        {/* </Route>
-        </Switch> */}
+          <Route path="/AddForm">
+            <Form />
+          </Route>
+        </Switch>
       </Wrapper>
     </ThemeProvider>
   </Router>

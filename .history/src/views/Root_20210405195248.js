@@ -4,21 +4,21 @@ import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
 import { Wrapper } from './Root.styled';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Form from 'components/organisms/Form/Form';
+import Form from 'components/organisms/AddForm/Form';
 
 const Root = () => (
   <Router>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Wrapper>
-        {/* <Switch> */}
-        {/* <Route path="/">
+        <Switch>
+          {/* <Route path="/">
             <TodoList />
           </Route> */}
-        {/* <Route path="/AddForm"> */}
-        <Form />
-        {/* </Route>
-        </Switch> */}
+          <Route path="/AddForm">
+            <Form />
+          </Route>
+        </Switch>
       </Wrapper>
     </ThemeProvider>
   </Router>

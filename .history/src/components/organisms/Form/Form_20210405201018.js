@@ -1,12 +1,9 @@
-import AddButton from 'components/atoms/AddButton/AddButton';
-import AddForm from 'components/molecules/AddForm/AddForm';
 import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 378px;
   height: 438px;
-  padding: 20px 0;
   background-color: ${({ theme }) => theme.colors.lightGreen};
   display: flex;
   justify-content: space-between;
@@ -17,8 +14,9 @@ const Wrapper = styled.div`
 `;
 
 const StyledHeader = styled.div`
-  margin: 60px 0 30px;
-  width: 70%;
+  padding-top: 10px;
+  margin: 0 10px 30px;
+  width: 90%;
   font-weight: bold;
   font-size: ${({ theme }) => theme.fontSize.xl};
   color: ${({ theme }) => theme.colors.darkBlue};
@@ -30,8 +28,6 @@ const Form = () => {
   return (
     <Wrapper>
       <StyledHeader>New ToDo:</StyledHeader>
-      <AddForm />
-      <AddButton />
     </Wrapper>
   );
 };

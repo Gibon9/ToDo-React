@@ -31,7 +31,7 @@ const Form = () => {
     <Wrapper>
       <StyledHeader>New ToDo:</StyledHeader>
       <AddForm />
-      <AddButton />
+      <AddButton>Add</AddButton>
     </Wrapper>
   );
 };

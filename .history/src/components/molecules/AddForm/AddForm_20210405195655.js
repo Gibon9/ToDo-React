@@ -6,7 +6,7 @@ const AddForm = ({ label, name, id, type = 'text', ...props }) => {
   return (
     <>
       <Label htmlFor={id}>{label}</Label>
-      <Input name={name} id={id} type={type} />
+      <Input />
     </>
   );
 };
