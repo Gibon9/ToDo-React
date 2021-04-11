@@ -3,7 +3,6 @@ import { todos as todosData } from 'data/todos';
 import TodoListItem from 'components/molecules/TodoListItem/TodoListItem';
 import { Wrapper, StyledHeader, StyledList } from './TodoList.styled';
 import AddButton from 'components/atoms/AddButton/AddButton';
-import { Link } from 'react-router-dom';
 
 const mockAPI = (success) => {
   return new Promise((resolve, reject) => {
@@ -44,9 +43,7 @@ const TodoList = () => {
           <TodoListItem deleteTodo={deleteTodo} key={data.id} data={data} />
         ))}
       </StyledList>
-      <Link to="/Form">
-        <AddButton />
-      </Link>
+      <AddButton />
     </Wrapper>
   );
 };

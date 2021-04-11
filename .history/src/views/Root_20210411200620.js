@@ -12,11 +12,11 @@ const Root = () => (
       <GlobalStyle />
       <Wrapper>
         <Switch>
-          <Route path="/Form">
-            <Form />
-          </Route>
           <Route path="/">
             <TodoList />
+          </Route>
+          <Route path="/Form">
+            <Form />
           </Route>
         </Switch>
       </Wrapper>
