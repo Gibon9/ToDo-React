@@ -12,7 +12,7 @@ const Form = () => {
       <StyledHeader>Add New ToDo:</StyledHeader>
       <AddForm name="AddToDo" id="AddToDo" type="AddToDo" label="Add ToDo" />
       <AddButton />
-      <Link to="/">
+      <Link>
         <CloseButton>
           <CloseIcon />
         </CloseButton>
