@@ -5,7 +5,7 @@ export const Input = styled.input`
   color: ${({ theme }) => theme.colors.lighBlue};
   font-size: ${({ theme }) => theme.fontSize.m};
   padding: 8px;
-  border-radius: 10px;
+  border-radius: 20px;
   width: 100%;
   max-height: 100px;
   background-color: ${({ theme }) => theme.colors.lightOrange};
