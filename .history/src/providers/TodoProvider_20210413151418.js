@@ -7,13 +7,15 @@ export const TodoContext = React.createContext({
 });
 
 const TodoProvider = ({ children }) => {
-  return (
-    <TodoContext.Provider
-      value={{ todos: [], deleteTodo: () => {}, addTodo: () => {} }}
-    >
-      {children}
-    </TodoContext.Provider>
-  );
+ return (
+   <>
+  <TodoContext.Provider
+  value={{ todos: [], deleteTodo: () => {}, addTodo: () => {} }}
+>
+  {children}
+  <TodoContext>
+  </>
+ ) 
 };
 
 export default TodoProvider;
