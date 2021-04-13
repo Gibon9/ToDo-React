@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 import { TodoContext } from 'views/Root';
 
 const Form = () => {
-  const context = useContext(TodoContext);
-
   return (
     <Wrapper as="form" onSubmit="">
       <StyledHeader>Add New ToDo:</StyledHeader>
