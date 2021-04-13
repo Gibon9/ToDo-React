@@ -12,7 +12,6 @@ const Form = () => {
   const { addTodo } = useContext(TodoContext);
 
   const handleInputChange = (e) => {
-    console.log(e.target.value);
     setFormValue(e.target.value);
   };
 
@@ -33,7 +32,9 @@ const Form = () => {
         value={formValue}
         onChange={handleInputChange}
       />
-      <AddButton type="submit" />
+      <Link to="/">
+        <AddButton type="submit" />
+      </Link>
       <Link to="/">
         <CloseButton>
           <CloseIcon />

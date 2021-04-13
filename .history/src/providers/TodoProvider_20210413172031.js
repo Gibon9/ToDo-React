@@ -10,22 +10,20 @@ export const TodoContext = React.createContext({
 const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState(todosData);
 
-  const addTodo = (value) => {
+  const addTodo = (e) => {
+    e.preventDefault();
     const newTodo = {
-      todo: value.toString(),
-      id: Math.random().toString(),
+      todo: formValue,
+      id: Math.random(),
     };
 
     setTodos([...todos, newTodo]);
-  };
 
-  const deleteTodo = (id) => {
-    const filteredTodos = todos.filter((todo) => todo.id !== id);
-    setTodos(filteredTodos);
+    setFormValue('');
   };
 
   return (
-    <TodoContext.Provider value={{ todos, deleteTodo, addTodo }}>
+    <TodoContext.Provider value={{ todos: [], deleteTodo: () => {}, addTodo }}>
       {children}
     </TodoContext.Provider>
   );

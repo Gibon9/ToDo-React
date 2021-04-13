@@ -12,7 +12,7 @@ const TodoProvider = ({ children }) => {
 
   const addTodo = (value) => {
     const newTodo = {
-      todo: value.toString(),
+      todo: value,
       id: Math.random().toString(),
     };
 

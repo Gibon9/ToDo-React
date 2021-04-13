@@ -11,12 +11,15 @@ const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState(todosData);
 
   const addTodo = (value) => {
+    e.preventDefault();
     const newTodo = {
-      todo: value.toString(),
-      id: Math.random().toString(),
+      todo: value,
+      id: Math.random(),
     };
 
     setTodos([...todos, newTodo]);
+
+    setFormValue('');
   };
 
   const deleteTodo = (id) => {

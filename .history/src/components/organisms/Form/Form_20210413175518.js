@@ -33,7 +33,9 @@ const Form = () => {
         value={formValue}
         onChange={handleInputChange}
       />
+      {/* <Link to="/"> */}
       <AddButton type="submit" />
+      {/* </Link> */}
       <Link to="/">
         <CloseButton>
           <CloseIcon />

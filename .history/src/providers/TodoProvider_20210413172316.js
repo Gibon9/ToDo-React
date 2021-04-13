@@ -12,8 +12,8 @@ const TodoProvider = ({ children }) => {
 
   const addTodo = (value) => {
     const newTodo = {
-      todo: value.toString(),
-      id: Math.random().toString(),
+      todo: value,
+      id: Math.random(),
     };
 
     setTodos([...todos, newTodo]);
