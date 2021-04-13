@@ -11,7 +11,7 @@ const Form = () => {
     <Wrapper>
       <StyledHeader>Add New ToDo:</StyledHeader>
       <AddForm name="AddToDo" id="AddToDo" type="AddToDo" label="Add ToDo" />
-      <Link to="/">
+      <Link>
         <AddButton />
       </Link>
       <Link to="/">
