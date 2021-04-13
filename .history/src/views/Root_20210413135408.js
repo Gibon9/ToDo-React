@@ -17,9 +17,7 @@ const Root = () => (
   <Router>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <TodoContext.Provider
-        value={{ todos, deleteTodo, addTodo}
-      >
+      <TodoContext.Provider>
         <Wrapper>
           <Switch>
             <Route path="/Form">

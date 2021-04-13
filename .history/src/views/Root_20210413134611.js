@@ -7,19 +7,13 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Form from 'components/organisms/Form/Form';
 import React from 'react';
 
-export const TodoContext = React.createContext({
-  todos: [],
-  deleteTodo: () => {},
-  addTodo: () => {},
-});
+const TodoContext = React.createContext({});
 
 const Root = () => (
   <Router>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <TodoContext.Provider
-        value={{ todos, deleteTodo, addTodo}
-      >
+      <TodoContext.Provider>
         <Wrapper>
           <Switch>
             <Route path="/Form">

@@ -18,7 +18,7 @@ const Root = () => (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <TodoContext.Provider
-        value={{ todos, deleteTodo, addTodo}
+        value={{ todos: [], deleteTodo: () => {}, addTodo: () => {} }}
       >
         <Wrapper>
           <Switch>
