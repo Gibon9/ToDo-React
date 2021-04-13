@@ -3,26 +3,11 @@ import { Label } from 'components/atoms/Label/Label';
 import { Input } from 'components/atoms/Input/Input';
 import { Wrapper } from './AddForm.styles';
 
-const AddForm = ({
-  onChange,
-  value,
-  label,
-  name,
-  id,
-  type = 'text',
-  ...props
-}) => {
+const AddForm = ({ value, label, name, id, type = 'text', ...props }) => {
   return (
     <Wrapper>
       <Label htmlFor={id}>{label}</Label>
-      <Input
-        name={name}
-        id={id}
-        type={type}
-        placeholder={label}
-        value={value}
-        onChange={onChange}
-      />
+      <Input name={name} id={id} type={type} placeholder={label} />
     </Wrapper>
   );
 };

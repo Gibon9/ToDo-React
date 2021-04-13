@@ -6,13 +6,18 @@ import { Wrapper } from './Root.styled';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Form from 'components/organisms/Form/Form';
 import React from 'react';
-import TodoProvider from 'providers/TodoProvider';
+
+export const TodoContext = React.createContext({
+  todos: [],
+  deleteTodo: () => {},
+  addTodo: () => {},
+});
 
 const Root = () => (
   <Router>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <TodoProvider>
+      <TodoContext.Provider>
         <Wrapper>
           <Switch>
             <Route path="/Form">
@@ -23,7 +28,7 @@ const Root = () => (
             </Route>
           </Switch>
         </Wrapper>
-      </TodoProvider>
+      </TodoContext.Provider>
     </ThemeProvider>
   </Router>
 );

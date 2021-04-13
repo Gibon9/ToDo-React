@@ -8,22 +8,15 @@ import { Link } from 'react-router-dom';
 import { TodoContext } from 'providers/TodoProvider';
 
 const Form = () => {
+  const context = useContext(TodoContext);
   const [formValue, setFormValue] = useState('');
-  const { addTodo } = useContext(TodoContext);
 
   const handleInputChange = (e) => {
-    console.log(e.target.value);
     setFormValue(e.target.value);
   };
 
-  const handleSubmitTodo = (e) => {
-    e.preventDefault();
-    addTodo(formValue);
-    setFormValue('');
-  };
-
   return (
-    <Wrapper as="form" onSubmit={handleSubmitTodo}>
+    <Wrapper as="form" onSubmit="">
       <StyledHeader>Add New ToDo:</StyledHeader>
       <AddForm
         name="AddToDo"
@@ -33,7 +26,9 @@ const Form = () => {
         value={formValue}
         onChange={handleInputChange}
       />
-      <AddButton type="submit" />
+      <Link to="/">
+        <AddButton type="submit" />
+      </Link>
       <Link to="/">
         <CloseButton>
           <CloseIcon />

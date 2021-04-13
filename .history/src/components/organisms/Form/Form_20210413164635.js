@@ -2,28 +2,21 @@ import AddButton from 'components/atoms/AddButton/AddButton';
 import { CloseButton } from 'components/atoms/CloseButton/CloseButton';
 import { ReactComponent as CloseIcon } from 'assets/icons/close-icon.svg';
 import AddForm from 'components/molecules/AddForm/AddForm';
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { Wrapper, StyledHeader } from './Form.styles';
 import { Link } from 'react-router-dom';
 import { TodoContext } from 'providers/TodoProvider';
 
 const Form = () => {
-  const [formValue, setFormValue] = useState('');
-  const { addTodo } = useContext(TodoContext);
+  const context = useContext(TodoContext);
+  const [formValue, setFormValue] = useContext('');
 
   const handleInputChange = (e) => {
-    console.log(e.target.value);
-    setFormValue(e.target.value);
-  };
-
-  const handleSubmitTodo = (e) => {
-    e.preventDefault();
-    addTodo(formValue);
-    setFormValue('');
+    e.target.value;
   };
 
   return (
-    <Wrapper as="form" onSubmit={handleSubmitTodo}>
+    <Wrapper as="form" onSubmit="">
       <StyledHeader>Add New ToDo:</StyledHeader>
       <AddForm
         name="AddToDo"
@@ -33,7 +26,9 @@ const Form = () => {
         value={formValue}
         onChange={handleInputChange}
       />
-      <AddButton type="submit" />
+      <Link to="/">
+        <AddButton type="submit" />
+      </Link>
       <Link to="/">
         <CloseButton>
           <CloseIcon />
