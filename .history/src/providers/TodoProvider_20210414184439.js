@@ -9,12 +9,7 @@ export const TodoContext = React.createContext({
 
 const TodoProvider = ({ children }) => {
   const [todos, setTodos] = useState([]);
-  useEffect(() => {
-    axios
-      .get('/todos')
-      .then(({ data }) => setTodos(data.todos))
-      .catch((e) => console.log(e));
-  }, []);
+  useEffect(() => {}, []);
 
   const addTodo = (value) => {
     const newTodo = {

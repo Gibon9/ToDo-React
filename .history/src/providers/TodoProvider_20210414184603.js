@@ -12,7 +12,7 @@ const TodoProvider = ({ children }) => {
   useEffect(() => {
     axios
       .get('/todos')
-      .then(({ data }) => setTodos(data.todos))
+      .then()
       .catch((e) => console.log(e));
   }, []);
 
